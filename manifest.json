@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "CF Shortcut",
+  "version": "1.0",
+
+  "description": "This extension shows codeforces current ratings and the upcoming contests",
+  "icons" : {
+  	"64" : "icon.png"
+  },
+
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts" : [
+  	{
+  		"matches" : ["http://*/*","https://*/*"],
+  		"js" : ["myScript.js"]
+  	}
+  ],
+
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+
+  "host_permissions": [
+    "https://codeforces.com/*",
+    "http://codeforces.com/*"
+  ]
+}
+
